@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 ohmyfolder="${HOME}/.oh-my-zsh"
-pluginfolder="$ohmyfolder/custom/plugins/gocloud" 
+pluginfolder="${ohmyfolder}/custom/plugins/gocloud"
 
 if [ ! -d $ohmyfolder ] ; then
     echo "Can't find .oh-my-zsh"
@@ -11,7 +11,7 @@ fi
 if [ ! -d $pluginfolder ] ; then
     echo "Creating $pluginfolder"
     mkdir -p "$pluginfolder"
-fi 
+fi
 
 if [ -d $pluginfolder ] ; then
     cp _gocloud $pluginfolder
@@ -22,5 +22,5 @@ if [ -d $pluginfolder ] ; then
     echo "  plugins+=(gocloud)"
     echo
     echo "Also add this to the end of your .zshrc file:"
-    echo "  autoload -U compinit && compinit"  
-fi 
+    echo "  autoload -U compinit && compinit"
+fi
