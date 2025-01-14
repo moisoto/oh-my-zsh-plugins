@@ -1,0 +1,18 @@
+# compdef gocloud
+
+_gocloud() {
+    # Define the base directory
+    local base_dir="${HOME}/Library/Mobile Documents/com~apple~CloudDocs"
+
+    # Use cd's completion but modify the path
+    local expl context state line
+    typeset -A opt_args
+
+    _arguments -C \
+        ':directory:_path_files -W "$base_dir" -/'
+}
+
+# Associate the completion function with the `gofolder` command
+compdef _gocloud gocloud
+
+_gocloud "$@"
